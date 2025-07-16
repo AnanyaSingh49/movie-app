@@ -1,0 +1,29 @@
+.genres-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px;
+  justify-content: center;
+}
+
+.genre-button {
+  background-color: #222;
+  border: 1px solid #555;
+  color: #eee;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.genre-button:hover {
+  background-color: #e50914;
+  color: white;
+}
+
+.genre-button.active {
+  background-color: #e50914;
+  color: white;
+  font-weight: bold;
+}

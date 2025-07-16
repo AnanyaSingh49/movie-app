@@ -1,4 +1,55 @@
 import React, { useContext, useState } from "react";
+import { MovieContext } from "../context/MovieContext";
+import { useNavigate } from "react-router-dom";
+import "../css/NavBar.css";
+
+function NavBar() {
+  const { setSearchQuery, setPage } = useContext(MovieContext);
+  const [input, setInput] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setPage(1);
+    setSearchQuery(input);
+    navigate("/");
+  };
+
+  const handleHome = () => {
+    setSearchQuery("");
+    setPage(1);
+    navigate("/");
+  };
+
+  const handleFav = () => {
+    navigate("/favourites");
+  };
+
+  return (
+    <nav className="navbar">
+      <div className="nav-left">
+        <h2 className="logo" onClick={handleHome}>🎬 MovieApp</h2>
+        <div className="nav-links">
+          <button onClick={handleHome}>🏠 Home</button>
+          <button onClick={handleFav}>❤️ Favourites</button>
+        </div>
+      </div>
+
+      <form className="search-form" onSubmit={handleSearch}>
+        <input
+          type="text"
+          placeholder="Search movies..."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button type="submit">🔍</button>
+      </form>
+    </nav>
+  );
+}
+
+export default NavBar;
+/*import React, { useContext, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { MovieContext } from "../context/MovieContext";
 import "../css/NavBar.css";
@@ -37,4 +88,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default NavBar;*/

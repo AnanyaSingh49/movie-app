@@ -1,3 +1,5 @@
+
+
 import React, { useContext, useState, useRef, useEffect } from "react";
 import { MovieContext } from "../context/MovieContext";
 import MovieModal from "./MovieModal";
@@ -34,11 +36,19 @@ function MovieCard({ movie }) {
         style={{ transform: `scale(${scale})` }}
         onClick={() => setShowModal(true)}
       >
-        <img src={imageBase + movie.poster_path} alt={movie.title} />
+        
+<img src={imageBase + movie.poster_path} alt={movie.title} />
         <div className="card-details">
           <h3>{movie.title}</h3>
           <p>{movie.release_date}</p>
-          <button onClick={(e) => { e.stopPropagation(); toggleFavourite(movie); }}>
+
+          <button
+  type="button"
+  onClick={(e) => {
+    e.stopPropagation();
+    toggleFavourite(movie);
+  }}
+>
             {isFav ? "❤️" : "🖤"}
           </button>
         </div>
@@ -50,3 +60,9 @@ function MovieCard({ movie }) {
 }
 
 export default MovieCard;
+
+
+
+
+
+
