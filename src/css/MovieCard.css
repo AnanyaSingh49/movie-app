@@ -6,6 +6,86 @@
   position: relative;
   transition: transform 0.3s ease;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.movie-card:hover {
+  transform: scale(1.06);
+  z-index: 2;
+}
+
+/* Poster container */
+.poster-container {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.poster-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fav-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  background-color: rgba(0, 0, 0, 0.85); /* Black square */
+  color: white;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;
+  border-radius: 4px; /* slight rounding for clean square look */
+  transition: background-color 0.2s ease;
+}
+
+.fav-btn:hover {
+  background-color: rgba(255, 0, 0, 0.85); /* Red hover */
+}
+
+.fav-btn.liked {
+  color: red;
+}
+
+/* Title & release */
+.card-details {
+  padding: 10px;
+  text-align: center;
+}
+
+.card-details h3 {
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 6px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-details p {
+  font-size: 12px;
+  color: #bbb;
+  margin: 0;
+}
+
+/*.movie-card {
+  width: 160px;
+  background-color: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
 }
@@ -76,7 +156,7 @@
   font-size: 12px;
   color: #bbb;
   margin: 0;
-}
+}*/
 
 /*
 .movie-card {
