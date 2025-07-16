@@ -2,6 +2,64 @@
   padding: 1rem 2rem;
 }
 
+/* Genre Buttons */
+.genres-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.genres-container button {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.genres-container button:hover,
+.genres-container .active {
+  background-color: #e50914;
+  color: white;
+}
+
+/* Netflix-style grid layout 
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 24px;
+  padding: 20px;
+  justify-items: center;
+  align-items: start;
+}*/
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  column-gap: 42px; /* ⬅️ Horizontal spacing between columns */
+  row-gap: 40px;     /* ⬅️ Vertical spacing between rows */
+  justify-items: center;
+  padding: 20px;
+  align-items: start;
+}
+
+/* Loading */
+.loader {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: gray;
+}
+
+
+/*.home {
+  padding: 1rem 2rem;
+}
+
 .search-bar {
   display: flex;
   margin-bottom: 2rem;
@@ -44,4 +102,4 @@
   justify-content: center;
   gap: 16px;
   padding: 20px;
-}
+}*/
