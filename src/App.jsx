@@ -18,7 +18,7 @@ function App() {
       <MovieProvider>
         <Routes>
           /* Public Routes */
-          <Route path="/login" element={<Login />} />
+          <Route path="/Login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           /* Protected Routes with NavBar */
           <Route

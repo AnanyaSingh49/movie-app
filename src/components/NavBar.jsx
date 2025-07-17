@@ -39,7 +39,7 @@ function NavBar() {
 
   const handleLogout = async () => {
     await signOut(auth);
-    navigate("/login");
+    navigate("/Login");
   };
 
   return (
@@ -74,7 +74,7 @@ function NavBar() {
           </>
         ) : (
           <>
-            <Link to="/login" className="nav-auth-link">Login</Link>
+            <Link to="/Login" className="nav-auth-link">Login</Link>
             <Link to="/signup" className="nav-auth-link">Signup</Link>
           </>
         )}
@@ -126,7 +126,7 @@ function NavBar() {
 
   const handleLogout = async () => {
     await signOut(auth);
-    navigate("/login");
+    navigate("/Login");
   };
 
   return (
@@ -157,7 +157,7 @@ function NavBar() {
           </>
         ) : (
           <>
-            <Link to="/login">Login</Link>
+            <Link to="/Login">Login</Link>
             <Link to="/signup">Signup</Link>
           </>
         )}
@@ -209,7 +209,7 @@ function NavBar() {
 
   const handleLogout = async () => {
     await signOut(auth);
-    navigate("/login");
+    navigate("/Login");
   };
 
   return (
@@ -240,7 +240,7 @@ function NavBar() {
           </>
         ) : (
           <>
-            <Link to="/login">Login</Link>
+            <Link to="/Login">Login</Link>
             <Link to="/signup">Signup</Link>
           </>
         )}
