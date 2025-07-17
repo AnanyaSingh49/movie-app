@@ -34,7 +34,9 @@ export function MovieProvider({ children }) {
   // ✅ Fetch genres
   useEffect(() => {
     axios
-      .get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}&language=en-US`)
+      .get(
+        `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}&language=en-US`
+      )
       .then((res) => {
         const genreMap = {};
         res.data.genres.forEach((g) => {
@@ -109,7 +111,6 @@ export function MovieProvider({ children }) {
     </MovieContext.Provider>
   );
 }
-
 
 /*import { createContext, useEffect, useState } from "react";
 import axios from "axios";
@@ -223,7 +224,6 @@ export function MovieProvider({ children }) {
     </MovieContext.Provider>
   );
 }*/
-
 
 /*import { createContext, useEffect, useState } from "react";
 import axios from "axios";
