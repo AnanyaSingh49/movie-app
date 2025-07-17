@@ -17,11 +17,10 @@ function App() {
     <AuthProvider>
       <MovieProvider>
         <Routes>
-          {/* Public Routes */}
+          /* Public Routes */
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-
-          {/* Protected Routes with NavBar */}
+          /* Protected Routes with NavBar */
           <Route
             path="/"
             element={
@@ -51,4 +50,3 @@ function App() {
 }
 
 export default App;
-
