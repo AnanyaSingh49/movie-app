@@ -45,37 +45,37 @@ function NavBar() {
   return (
     <nav className="navbar">
       <div className="nav-left">
-        <h2 className="logo" onClick={handleHome}>
-          🎬 byananya
-        </h2>
-        <div className="nav-links">
-          <button onClick={handleHome}>🏠 Home</button>
-          <button onClick={handleFav}>❤️ Favourites</button>
-        </div>
+        <h2 className="logo" onClick={handleHome}>🎬 byananya</h2>
+        {user && (
+          <div className="nav-links">
+            <button onClick={handleHome}>🏠 Home</button>
+            <button onClick={handleFav}>❤️ Favourites</button>
+          </div>
+        )}
       </div>
 
-      <form className="search-form" onSubmit={handleSearch}>
-        <input
-          type="text"
-          placeholder="Search movies..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <button type="submit">🔍</button>
-      </form>
+      {user && (
+        <form className="search-form" onSubmit={handleSearch}>
+          <input
+            type="text"
+            placeholder="Search movies..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button type="submit">🔍</button>
+        </form>
+      )}
 
       <div className="auth-links">
         {user ? (
           <>
             <span className="user-email">{user.email}</span>
-            <button onClick={handleLogout} className="logout-btn">
-              Logout
-            </button>
+            <button onClick={handleLogout} className="logout-btn">Logout</button>
           </>
         ) : (
           <>
-            <Link to="/login">Login</Link>
-            <Link to="/signup">Signup</Link>
+            <Link to="/login" className="nav-auth-link">Login</Link>
+            <Link to="/signup" className="nav-auth-link">Signup</Link>
           </>
         )}
       </div>
