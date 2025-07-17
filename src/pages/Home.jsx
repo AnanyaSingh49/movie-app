@@ -1,3 +1,5 @@
+
+
 import React, { useContext, useEffect } from "react";
 import { MovieContext } from "../context/MovieContext";
 import MovieCard from "../components/MovieCard";
@@ -52,13 +54,14 @@ function Home() {
         ))}
       </div>
 
-      {/* Optional: loading spinner or text */}
+      
       {loading && <p style={{ textAlign: "center", color: "white" }}>Loading...</p>}
     </div>
   );
 }
 
 export default Home;
+
 /*import React, { useContext, useEffect } from "react";
 import { MovieContext } from "../context/MovieContext";
 import MovieCard from "../components/MovieCard";

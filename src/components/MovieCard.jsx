@@ -1,15 +1,16 @@
+
+
 import React, { useContext, useState, useRef, useEffect } from "react";
 import { MovieContext } from "../context/MovieContext";
 import MovieModal from "./MovieModal";
 import "../css/MovieCard.css";
 
-function MovieCard({ movie }) {
-  const { favourites, toggleFavourite } = useContext(MovieContext);
+
+function MovieCard({ movie, isFav, toggleFavourite }) {
   const [showModal, setShowModal] = useState(false);
   const cardRef = useRef();
   const [scale, setScale] = useState(1);
 
-  const isFav = favourites.some((m) => m.id === movie.id);
   const imageBase = "https://image.tmdb.org/t/p/w300";
 
   useEffect(() => {
@@ -44,14 +45,14 @@ function MovieCard({ movie }) {
             alt={movie.title}
           />
           <button
-            className={`fav-btn ${isFav ? "liked" : ""}`}
-            onClick={(e) => {
-              e.stopPropagation();
-              toggleFavourite(movie);
-            }}
-          >
-            {isFav ? "❤️" : "🤍"}
-          </button>
+  className={`fav-btn ${isFav ? "liked" : ""}`}
+  onClick={(e) => {
+    e.stopPropagation();
+    toggleFavourite(movie);
+  }}
+>
+  {isFav ? "❤️" : "🤍"}
+</button>
         </div>
 
         <div className="card-details">
