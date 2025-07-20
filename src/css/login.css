@@ -34,7 +34,7 @@
 }
 
 .auth-form input:focus {
-  border-color: #007bff;
+  border-color: #ff0000;
 }
 
 /* Submit button */
@@ -44,7 +44,7 @@
   font-size: 1.05rem;
   border: none;
   border-radius: 8px;
-  background-color: #007bff;
+  background-color: #ff0000;
   color: #fff;
   font-weight: 500;
   cursor: pointer;
@@ -52,13 +52,37 @@
 }
 
 .auth-form button:hover {
-  background-color: #0056b3;
+  background-color: #b30000;
 }
 
 /* Error message */
 .error {
-  color: #e53935;
+  color: #3575e5;
   margin-top: 0.8rem;
   font-size: 0.9rem;
   text-align: center;
+}
+/* Group Log In and Sign Up buttons side-by-side */
+.button-group {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff1e00;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #5b1133;
 }
